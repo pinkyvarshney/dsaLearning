@@ -6,14 +6,18 @@ public class ProductOfArrayExceptSelf {
         int prefix[]=new int [5];
 
          prefix[0]=1;
-      for(int i=1;i<a.length-1;i++){
+      for(int i=1;i<a.length;i++){
           prefix[i]=prefix[i-1]*a[i-1];
       }
       int result =1;
-     int suffix[a.length-1]=1;
-      for(int i=a.length-1;i>=0;i++){
-         suffix[i]=suffix[i+1]*a[i+1];
+     int suffix=1;
+      for(int i=a.length-2;i>=0;i--){
+         suffix=suffix*a[i+1];
+       prefix[i]=prefix[i]*suffix;
 
+      }
+      for (int i=0;i<a.length;i++) {
+          System.out.print(prefix[i]+" ");
       }
 
     }
