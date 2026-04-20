@@ -5,8 +5,6 @@ import java.util.Map;
 
 public class ContigousArray {
     public static void main(String[] args) {
-
-
         int num[] = {1,0,1,0,0,1};
         Map<Integer, Integer> mp = new HashMap<>();
         mp.put(0,-1);
