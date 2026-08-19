@@ -6,12 +6,15 @@ public class ContainerWithMostWater {
         int low=0,high=a.length-1;
        int maxLen =0,area;
 while (low<high){
-    area=(high-low)*Math.min(a[low],a[high]);
-    maxLen=Math.max(maxLen,area);
+
     if(a[low]<a[high]){
+        area=(high-low)*Math.min(a[low],a[high]);
+        maxLen=Math.max(maxLen,area);
         low++;
     }
     else {
+        area=(high-low)*Math.min(a[low],a[high]);
+        maxLen=Math.max(maxLen,area);
         high--;
     }
 }
